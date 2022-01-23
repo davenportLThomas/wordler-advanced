@@ -34,12 +34,13 @@ function App() {
 
   const onInputchange = (event) => {
     var value = parseInt(event.target.value);
-    if(isNaN(value) || value > 13){
+    if(isNaN(value) || value > 13 || value < 3){
       setSize('');
     }
     else
     {
       setSize(parseInt(event.target.value));
+      setSecretWord('');
     }
   }
 
