@@ -2,28 +2,22 @@ import './App.css';
 import React from 'react';
 import Square from './Square';
 
-class WordLine extends React.Component {
+function WordLine(props) {
 
-    constructor(props) {
-        super(props);
-        console.log(this.props.n);
-    }
-
-   createRows(){
+   function createRows(){
        var rows = [];
-        for (var i = 0; i < 6; i++) {
+        for (var i = 0; i < props.n; i++) {
             rows.push(<Square />);
         }
         return (rows);
     }
 
-    render() {
-        return(
-            <div>
-                {this.createRows()}
-            </div>
-        );
-    }
+    return(
+        <div>
+            {createRows()}
+        </div>
+    );
+    
 }
 
 export default WordLine;

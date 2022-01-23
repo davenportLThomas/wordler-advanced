@@ -5,9 +5,14 @@
   border-color: white;
   background-color: black;
   color: white;
-  size: large;
+  font-size: 30px;
   height: 40px;
   width: 40px;
   overflow: hidden;
+  text-align: center;
 }
 
+.Title {
+  font-size: 40px;
+  color: rgb(82, 41, 230);
+}
