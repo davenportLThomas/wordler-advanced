@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import WordLine from './WordLine';
 import './App.css';
 
 function App() {
+
+  function createGrid(){
+    var grid = [];
+     for (var i = 0; i < 6; i++) {
+         grid.push(<WordLine n="6"/>);
+     } 
+     return (grid);
+ }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        {createGrid()}
     </div>
   );
 }
