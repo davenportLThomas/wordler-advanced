@@ -27,7 +27,7 @@ function App() {
   function createGrid(){
     var grid = [];
      for (var i = 0; i < size + 1; i++) {
-         grid.push(<WordLine n={size}/>);
+         grid.push(<WordLine n={size} secret={secretWord}/>);
      } 
      return (grid);
  }
@@ -56,6 +56,7 @@ function App() {
       Enter word size
       <input type="text" maxLength='2' value={size} onChange={onInputchange}></input>
     </div>
+    {secretWord}
     </div>
   );
 }
