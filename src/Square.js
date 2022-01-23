@@ -14,7 +14,7 @@ function Square() {
     }
 
     return(
-        <input type="text" className ='Square' maxLength='1' value={value} onChange={onInputchange} autoFocus></input>
+        <input type="text" className ='Square' maxLength='1' value={value} onChange={onInputchange}></input>
     )
     
 }
