@@ -1,6 +1,7 @@
 import WordLine from './WordLine';
 import './App.css';
 import React, { useState } from 'react';
+import Slider from '@mui/material/Slider';
 
 function App() {
 
@@ -49,12 +50,21 @@ function App() {
     <div className='Title'> 
       Wordle Advanced
     </div>
+    Enter word size
+      <Slider
+    aria-label="Temperature"
+    defaultValue={30}
+    valueLabelDisplay="auto"
+    onChange={onInputchange}
+    value={size}
+    step={1}
+     marks
+    min={3}
+    max={11}
+    size="small"
+    />
     <div>
         {createGrid()}
-    </div>
-    <div className='SizeChange'>
-      Enter word size
-      <input type="text" maxLength='2' value={size} onChange={onInputchange}></input>
     </div>
     {secretWord}
     </div>
